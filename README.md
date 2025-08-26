@@ -44,5 +44,5 @@ It connects to the **GrowPulse Backend** API and renders a clean, modern interfa
 
 1. Clone the repo
 ```bash
-git clone https://github.com/your-username/growpulse-frontend.git
+git clone https://github.com/mejorandro/growpulse-frontend.git
 cd growpulse-frontend
