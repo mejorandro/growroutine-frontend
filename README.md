@@ -1,5 +1,3 @@
----
-
 # 📖 README – **growpulse-frontend**
 
 ```markdown
