@@ -1,7 +1,7 @@
 ---
 title: "El poder del 1% diario"
 excerpt: "No se trata de cambios gigantescos, sino de pequeñas decisiones repetidas en el tiempo. La constancia vence al talento cuando el talento no es constante."
-coverImage: "/assets/blog/preview/cover.jpg"
+coverImage: "/assets/blog/covers/1-diario.jpg"
 date: "2025-08-30T09:00:00.000Z"
 author:
   name: Alejandro Bermúdez
