@@ -5,7 +5,7 @@ coverImage: "/assets/blog/preview/cover.jpg"
 date: "2025-09-04T09:00:00.000Z"
 author:
   name: Alejandro Bermúdez
-  picture: "/assets/blog/authors/alejandro.jpg"
+  picture: "/assets/blog/authors/mejorandro.png"
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---
