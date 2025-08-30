@@ -1,13 +1,13 @@
 ---
 title: "Cómo dominar tu tiempo (antes de que tu tiempo te domine a ti)"
-excerpt: "El tiempo es el recurso más democrático: todos tenemos 24 horas. La diferencia está en cómo lo usas. Quien controla su atención, controla su destino."
-coverImage: "/assets/blog/preview/cover.jpg"
+excerpt: "El tiempo es el recurso más justo: todos recibimos las mismas 24 horas cada día. Sin embargo, la diferencia entre quienes avanzan y quienes se estancan está en cómo eligen invertirlo. Aprender a dominar tu atención es el verdadero superpoder: lo convierte en libertad, enfoque y resultados que se multiplican con los años."
+coverImage: "/assets/blog/covers/dessert.jpg"
 date: "2025-09-04T09:00:00.000Z"
 author:
   name: Alejandro Bermúdez
   picture: "/assets/blog/authors/mejorandro.png"
 ogImage:
-  url: "/assets/blog/preview/cover.jpg"
+  url: "/assets/blog/covers"
 ---
 
 El tiempo es el bien más valioso y, al mismo tiempo, el más fácil de desperdiciar.  

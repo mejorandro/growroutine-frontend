@@ -1,7 +1,7 @@
 ---
 title: "El 20% que cambia el 80%"
 excerpt: "No todos los hábitos pesan igual. Algunos pocos son los que realmente mueven la balanza. Identificarlos y enfocarte en ellos es multiplicar tu tiempo y tu energía."
-coverImage: "/assets/blog/preview/cover.jpg"
+coverImage: "/assets/blog/covers/jw-sunset-cover.jpg"
 date: "2025-09-02T09:00:00.000Z"
 author:
   name: Alejandro Bermúdez

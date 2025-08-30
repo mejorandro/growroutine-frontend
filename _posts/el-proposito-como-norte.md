@@ -1,7 +1,7 @@
 ---
 title: "Cómo un propósito claro transforma tus hábitos sin esfuerzo"
 excerpt: "Cuando sabes hacia dónde vas, cada hábito deja de ser una carga y se convierte en un paso natural. El propósito es la brújula que da sentido a tu disciplina."
-coverImage: "/assets/blog/preview/cover.jpg"
+coverImage: "/assets/blog/covers/proposito-claro.jpg"
 date: "2025-09-03T09:00:00.000Z"
 author:
   name: Alejandro Bermúdez
