@@ -20,7 +20,7 @@ export function Footer() {
               href={`https://github.com/mejorandro/${EXAMPLE_PATH}`}
               className="mx-3 font-bold hover:underline"
             >
-              Ver GitHub
+              Ver on GitHub
             </a>
           </div>
         </div>
