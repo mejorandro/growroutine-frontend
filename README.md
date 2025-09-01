@@ -92,6 +92,81 @@ npm run dev
 ```
 
 > Requires **Node.js >=18.17** and npm/yarn/pnpm.
+=======
+## ⚡ Quick Start
+
+```bash
+git clone https://github.com/mejorandro/growpulse-frontend
+cd growpulse-frontend
+npm install
+npm run dev
+```
+
+> Requires **Node.js >=18.17** and npm/yarn/pnpm.
+
+---
+
+## 🔑 Environment Variables
+
+Create a `.env.local` file in the root with:
+
+```
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
+```
+
+An `.env.example` is recommended for collaborators.
+
+---
+
+## 📂 Project Structure
+
+```
+/app
+  /_components   → UI reusable components
+  /posts         → Markdown blogs
+  /api           → Routes
+/public          → Images, assets
+/docs            → Diagrams & architecture
+```
+
+---
+
+## 🤝 Contributing
+
+- Follow **Conventional Commits** (`feat:`, `fix:`, `docs:`, `chore:`).  
+- Pull requests should include description + screenshots if UI changes.  
+- Use ESLint + Prettier for consistency.  
+- Add tests for new features.
+
+---
+
+## 🧪 Testing
+
+We aim to cover:  
+- **Unit tests** for components (Jest, React Testing Library)  
+- **Integration tests** for API routes  
+- **E2E tests** with Playwright or Cypress  
+
+Run tests with:
+
+```bash
+npm run test
+```
+
+---
+
+## 🚀 Deployment
+
+- Default deployment target: **Vercel** (recommended for Next.js)  
+- Ensure env vars are set in Vercel dashboard  
+- Auto deploys from `main` branch
+
+---
+
+## 📜 License
+
+This project is under the **MIT License**. See `LICENSE` file for details.
 
 ---
 
