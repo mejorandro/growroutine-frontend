@@ -32,7 +32,6 @@ export default function DraftBlog({ data }: { data: PulseResponse }) {
     }, [])
 
     return (<>
-        <Header />
         <article className="space-y-6 max-w-3xl mx-auto">
             {/* Blog title */}
             <h1 className="text-4xl font-bold">{data.title || "Draft title"}</h1>
