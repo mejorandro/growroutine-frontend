@@ -66,6 +66,33 @@ Even though still evolving, the architecture looks like this:
 
 ---
 
+## 📝 Blog Creation Flow
+
+The current blog creation flow works as follows:
+
+1. User enters **profession + sector** in the form.  
+2. API call to backend generates blog title + summary.  
+3. Progressive rendering shows blog sections step by step.  
+
+### Screenshots
+
+![Create Blog Flow - Step 1](docs/create-blog-flow.png)  
+![Create Blog Flow - Step 2](docs/create-blog-flow-2.png)  
+![Create Blog Flow - Step 3](docs/create-blog-flow-3.png)  
+
+---
+
+## ⚡ Quick Start
+
+```bash
+git clone https://github.com/mejorandro/growpulse-frontend
+cd growpulse-frontend
+npm install
+npm run dev
+```
+
+> Requires **Node.js >=18.17** and npm/yarn/pnpm.
+=======
 ## ⚡ Quick Start
 
 ```bash
