@@ -6,36 +6,56 @@ The main intelligence and orchestration live in the **[GrowPulse Backend](https:
 ---
 
 ## 🚧 About This Repo
-The **GrowPulse Frontend** is a Next.js app designed to turn backend outputs into a **shareable, minimalistic blog experience**.  
-It supports Markdown-based posts (`/posts`) and includes previews, author metadata, and image handling.  
+The **GrowPulse Frontend** is a **Next.js 14** app designed to transform backend outputs into a **dynamic blog-like experience**.  
+
+It currently supports:
+- Static Markdown posts (`/posts`)  
+- Author metadata and image handling  
+- Blog previews and Hero sections  
+- A working **form component (StartBlogForm)** connected to the backend API  
 
 At this stage:
-- Blog engine is **running with static Markdown posts**.  
-- Styling is minimal but functional.  
-- Architecture is prepared to consume JSON APIs from the backend.  
+- ✅ Blog engine is running with static content  
+- ✅ Frontend successfully connects to backend API  
+- ✅ First AI-generated briefings are rendered from `profession + sector` input  
 
 ---
 
 ## 🔗 Where to Look First
 👉 Please visit the backend repository to see the **real intelligence engine**:  
 
-**➡️ [GrowPulse Backend](https://github.com/mejorandro/growpulse-backend)**
+**➡️ [GrowPulse Backend](https://github.com/mejorandro/growpulse-backend)**  
 
-The backend already provides:
+The backend provides:
 - AI agent orchestration (**LangChain + LangGraph**)  
 - Daily readings pipeline (news → meaning → actions → posts → POC ideas)  
-- JSON API consumable by any frontend  
-- Docker support for local or production deployment  
+- JSON API consumable by this frontend  
+- FastAPI + Uvicorn deployment  
 
 ---
 
-## ✨ Next Feature (In Progress)
-We are building the first **dynamic component**:
-- Users will choose their **profession, sector, and role**.  
-- GrowPulse will use the backend agents to generate a **custom blog article** in real time.  
-- Users can **add their name + email** to publish it into the documentation/blog feed.  
+## ✨ Current Features
+- **Static blogs** powered by Markdown under `/posts`  
+- **Dynamic form (StartBlogForm)** → sends profession + sector → returns a generated blog  
+- Rendering of AI-generated sections:  
+  - Title & summary  
+  - News  
+  - Meaning (opportunities)  
+  - Action  
+  - LinkedIn post  
+  - POC ideas  
+  - Compounding  
+  - Final summary  
 
-This will turn GrowPulse from a static reader into a **collaborative AI-powered publishing tool**.
+---
+
+## 🚀 Next Features (Roadmap)
+We are evolving from a **static reader** to a **dynamic funnel**:  
+- **Redirect Flow:** instead of showing full blog inline, redirect users to `/{profession}/{sector}`  
+- **Progressive Rendering:** show title + summary instantly, reveal sections step by step (ChatGPT-style)  
+- **Analytics:** track funnel drop-off and engagement  
+- **Authentication:** allow publishing only for logged-in users (Google Auth, Cognito)  
+- **SEO:** make each `/profession/sector` page indexable with dynamic metadata  
 
 ---
 
@@ -46,10 +66,39 @@ Even though still evolving, the architecture looks like this:
 
 ---
 
-## 📌 Note for Visitors
-If you’re evaluating this project (e.g., as a hiring manager or collaborator):  
-- The backend is where the **real AI engine** lives.  
-- This frontend is actively evolving into a **dynamic, role-aware blog generator**.  
-- Long‑term goal: a smooth, scannable UI for sharing backend insights at scale.  
+## 📝 Blog Creation Flow
+
+The current blog creation flow works as follows:
+
+1. User enters **profession + sector** in the form.  
+2. API call to backend generates blog title + summary.  
+3. Progressive rendering shows blog sections step by step.  
+
+### Screenshots
+
+![Create Blog Flow - Step 1](docs/create-blog-flow.png)  
+![Create Blog Flow - Step 2](docs/create-blog-flow-2.png)  
+![Create Blog Flow - Step 3](docs/create-blog-flow-3.png)  
 
 ---
+
+## ⚡ Quick Start
+
+```bash
+git clone https://github.com/mejorandro/growpulse-frontend
+cd growpulse-frontend
+npm install
+npm run dev
+```
+
+> Requires **Node.js >=18.17** and npm/yarn/pnpm.
+
+---
+
+## 📌 Note for Visitors
+If you’re evaluating this project (e.g., as a hiring manager or collaborator):  
+- The backend is where the **AI engine** lives.  
+- This frontend is actively evolving into a **funnel-based, role-aware blog generator**.  
+- Long-term goal: a **personalized daily AI briefing** platform that helps professionals stay updated and showcase their expertise.  
+
+🌱 GrowPulse (subproduct of **GrowRoutine**) is not just about blogs — it’s about **scalable personal growth**: turning 1% daily improvements into global opportunities.  
