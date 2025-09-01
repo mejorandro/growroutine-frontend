@@ -23,7 +23,7 @@ export default function StartBlogForm() {
   return (
     <section className="my-12">
       <h2 className="mb-4 text-5xl font-bold">
-        Create your Dynamic Blog
+        Crear blog dinámico
       </h2>
       <p className="mt-4 text-lg leading-relaxed mb-4">
         El que no escribe su historia, termina leyendo la de otros. Tú no...

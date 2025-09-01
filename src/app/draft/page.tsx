@@ -1,12 +1,15 @@
 import { notFound } from "next/navigation"
-import DraftBlog from "../_components/draft-blog";
+import DraftBlog from "../_components/draft-blog"
 import { PulseResponse } from "@/lib/pulse-client"
+import Container from "../_components/container";
+import Header from "../_components/header";
 
 export default async function DraftPage({
   searchParams,
 }: {
   searchParams: Promise<{ profession?: string; sector?: string }>
 }) {
+  // ✅ Await searchParams (required in Next.js 15)
   const sp = await searchParams
   const profession = sp.profession
   const sector = sp.sector
@@ -34,8 +37,11 @@ export default async function DraftPage({
   const data: PulseResponse = await res.json()
 
   return (
-    <main className="py-12">
-      <DraftBlog data={data} />
-    </main>
+    <Container>
+      <Header></Header>
+      <main className="py-12">
+        <DraftBlog data={data} />
+      </main>
+    </Container>
   )
 }
