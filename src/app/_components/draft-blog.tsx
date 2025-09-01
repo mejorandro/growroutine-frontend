@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { PulseResponse } from "@/lib/pulse-client"
-import Header from "./header"
+
 
 /**
  * DraftBlog
@@ -13,7 +13,7 @@ import Header from "./header"
  * Props:
  * - data: PulseResponse (title, summary, news, meaning, etc.)
  */
-export default function DraftBlog({ data }: { data: PulseResponse }) {
+export default async function DraftBlog({ data }: { data: PulseResponse }) {
     const [step, setStep] = useState(0)
 
     // Progressive reveal of blog sections (1 per second)
@@ -31,61 +31,62 @@ export default function DraftBlog({ data }: { data: PulseResponse }) {
         return () => timers.forEach(clearTimeout)
     }, [])
 
-    return (<>
+    return (
         <article className="space-y-6 max-w-3xl mx-auto">
             {/* Blog title */}
-            <h1 className="text-4xl font-bold">{data.title || "Draft title"}</h1>
+            <h1 dangerouslySetInnerHTML={{ __html: data.title }} className="text-4xl font-bold" />
 
             {/* Blog summary */}
-            <p className="text-lg text-gray-700">{data.summary || "Draft summary"}</p>
+            <p dangerouslySetInnerHTML={{ __html: data.summary }} className="text-lg text-gray-700" />
 
             {/* Sections appear progressively */}
             {step >= 1 && (
                 <section className="animate-fadeIn">
                     <h3 className="text-xl font-semibold mb-2">📰 News</h3>
-                    <p>{data.news}</p>
+                    <p dangerouslySetInnerHTML={{ __html: data.news }} />
                 </section>
             )}
 
             {step >= 2 && (
                 <section className="animate-fadeIn">
                     <h3 className="text-xl font-semibold mb-2">💡 Meaning</h3>
-                    <p>{data.meaning}</p>
+                    <p dangerouslySetInnerHTML={{ __html: data.meaning }} />
                 </section>
             )}
 
             {step >= 3 && (
                 <section className="animate-fadeIn">
                     <h3 className="text-xl font-semibold mb-2">⚡ Action</h3>
-                    <p>{data.action}</p>
+                    <p dangerouslySetInnerHTML={{ __html: data.action }} />
                 </section>
             )}
 
             {step >= 4 && (
                 <section className="animate-fadeIn">
                     <h3 className="text-xl font-semibold mb-2">🔗 LinkedIn</h3>
-                    <p>{data.linkedin_post}</p>
+                    <p dangerouslySetInnerHTML={{ __html: data.linkedin_post }} />
                 </section>
             )}
+            
 
             {step >= 5 && (
                 <section className="animate-fadeIn">
                     <h3 className="text-xl font-semibold mb-2">🛠️ POCs</h3>
-                    <p>{data.poc_ideas}</p>
+                    <p dangerouslySetInnerHTML={{ __html: data.poc_ideas }} />
                 </section>
             )}
 
             {step >= 6 && (
                 <section className="animate-fadeIn">
                     <h3 className="text-xl font-semibold mb-2">📈 Compounding</h3>
-                    <p>{data.compounding}</p>
+                    <p dangerouslySetInnerHTML={{ __html: data.compounding }} />
                 </section>
             )}
 
             {step >= 7 && (
                 <section className="animate-fadeIn">
                     <h3 className="text-xl font-semibold mb-2">📋 Final Summary</h3>
-                    <p>{data.final_summary}</p>
+                    <p dangerouslySetInnerHTML={{ __html: data.final_summary }} />
                 </section>
             )}
 
@@ -101,6 +102,5 @@ export default function DraftBlog({ data }: { data: PulseResponse }) {
                 </div>
             )}
         </article>
-    </>
     )
 }
