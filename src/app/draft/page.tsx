@@ -1,46 +1,53 @@
 import { notFound } from "next/navigation"
 import DraftBlog from "../_components/draft-blog"
-import { PulseResponse } from "@/lib/pulse-client"
-import Container from "../_components/container";
-import Header from "../_components/header";
+import { fetchPulse, PulseResponse } from "@/lib/pulse-client"
+import Container from "../_components/container"
+import Header from "../_components/header"
+import markdownToHtml from "@/lib/markdownToHtml"
+
 
 export default async function DraftPage({
   searchParams,
 }: {
   searchParams: Promise<{ profession?: string; sector?: string }>
 }) {
-  // ✅ Await searchParams (required in Next.js 15)
   const sp = await searchParams
   const profession = sp.profession
   const sector = sp.sector
 
   if (!profession || !sector) return notFound()
 
-  // Build absolute URL for server-side fetch
-  const baseUrl =
-    process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"
-
-  const res = await fetch(`${baseUrl}/api/pulse`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
+  let data: PulseResponse
+  try {
+    data = await fetchPulse({
       task: "Daily briefing",
-      lang: "es", // TODO: support dynamic multilanguage
+      lang: "es", // TODO: Support Multi-Language 
       profession,
       sector,
-    }),
-    cache: "no-store", // avoid stale data for drafts
-  })
+    })
+  } catch (e) {
+    return notFound()
+  }
 
-  if (!res.ok) return notFound()
-
-  const data: PulseResponse = await res.json()
+  // Convert Markdown -> HTML for each field
+  const processedData: PulseResponse = {
+    ...data,
+    title: await markdownToHtml(data.title),
+    summary: await markdownToHtml(data.summary),
+    news: await markdownToHtml(data.news),
+    meaning: await markdownToHtml(data.meaning),
+    action: await markdownToHtml(data.action),
+    linkedin_post: await markdownToHtml(data.linkedin_post),
+    poc_ideas: await markdownToHtml(data.poc_ideas),
+    compounding: await markdownToHtml(data.compounding),
+    final_summary: await markdownToHtml(data.final_summary),
+  }
 
   return (
     <Container>
-      <Header></Header>
+      <Header />
       <main className="py-12">
-        <DraftBlog data={data} />
+        <DraftBlog data={processedData} />
       </main>
     </Container>
   )
