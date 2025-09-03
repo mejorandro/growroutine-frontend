@@ -30,7 +30,30 @@ export async function fetchPulse(input: PulseInput): Promise<PulseResponse> {
       profession: input.profession,
       sector: input.sector,
     }),
-    cache: "no-store", // para evitar stale data
+    cache: "no-store", // avoid stale data
+  })
+
+  if (!res.ok) {
+    throw new Error(`Pulse API error: ${res.status}`)
+  }
+
+  return res.json()
+}
+
+export async function fetchBlogIntro(input: PulseInput): Promise<PulseResponse> {
+  const baseUrl =
+    process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000"
+  console.log(`${baseUrl}/api/pulse/title`);
+  const res = await fetch(`${baseUrl}/api/pulse/blog-intro`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      task: input.task ?? "Daily briefing",
+      lang: input.lang,
+      profession: input.profession,
+      sector: input.sector,
+    }),
+    cache: "no-store", // avoid stale data
   })
 
   if (!res.ok) {
