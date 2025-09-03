@@ -74,11 +74,20 @@ The current blog creation flow works as follows:
 2. API call to backend generates blog title + summary.  
 3. Progressive rendering shows blog sections step by step.  
 
-### Screenshots
+# App Screenshots 
 
-![Create Blog Flow - Step 1](docs/create-blog-flow.png)  
-![Create Blog Flow - Step 2](docs/create-blog-flow-2.png)  
-![Create Blog Flow - Step 3](docs/create-blog-flow-3.png)  
+## Form
+![Create Blog Flow - Step 1](docs/create-blog-flow-A-v2.png)  
+
+## Loading Page
+![Create Blog Flow - Step 2](docs/create-blog-flow-B-v2.png)  
+
+## Generated AI Blog Content based on user profesion & sector
+![Create Blog Flow - Step 3](docs/create-blog-flow-C-v2.png)  
+
+## Final blog - Pending to refine more
+![Create Blog Flow - Step 4](docs/create-blog-flow-D-v2.png)  
+
 
 ---
 
