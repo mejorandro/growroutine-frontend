@@ -51,7 +51,7 @@ The backend provides:
 
 ## 🚀 Next Features (Roadmap)
 We are evolving from a **static reader** to a **dynamic funnel**:  
-- **Redirect Flow:** instead of showing full blog inline, redirect users to `/{profession}/{sector}`  
+- **Refine Prompt** refine promt on the backend to give more value to the final user 
 - **Progressive Rendering:** show title + summary instantly, reveal sections step by step (ChatGPT-style)  
 - **Analytics:** track funnel drop-off and engagement  
 - **Authentication:** allow publishing only for logged-in users (Google Auth, Cognito)  
@@ -101,17 +101,6 @@ npm run dev
 ```
 
 > Requires **Node.js >=18.17** and npm/yarn/pnpm.
-=======
-## ⚡ Quick Start
-
-```bash
-git clone https://github.com/mejorandro/growpulse-frontend
-cd growpulse-frontend
-npm install
-npm run dev
-```
-
-> Requires **Node.js >=18.17** and npm/yarn/pnpm.
 
 ---
 
@@ -148,20 +137,6 @@ An `.env.example` is recommended for collaborators.
 - Use ESLint + Prettier for consistency.  
 - Add tests for new features.
 
----
-
-## 🧪 Testing
-
-We aim to cover:  
-- **Unit tests** for components (Jest, React Testing Library)  
-- **Integration tests** for API routes  
-- **E2E tests** with Playwright or Cypress  
-
-Run tests with:
-
-```bash
-npm run test
-```
 
 ---
 
