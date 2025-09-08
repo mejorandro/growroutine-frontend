@@ -4,8 +4,8 @@ excerpt: "No todos los hábitos pesan igual. Algunos pocos son los que realmente
 coverImage: "/assets/blog/covers/jw-sunset-cover.jpg"
 date: "2025-09-02T09:00:00.000Z"
 author:
-  name: Alejandro Bermúdez
-  picture: "/assets/blog/authors/mejorandro.png"
+  name: GrowRoutine
+  picture: "/assets/blog/authors/growroutine.png"
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
 ---

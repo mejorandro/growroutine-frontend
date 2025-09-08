@@ -60,13 +60,6 @@ export default function DraftBlog({ data }: { data: PulseResponse }) {
                 <p dangerouslySetInnerHTML={{ __html: data.final_summary }} />
             </section>
         )}
-        <div className="mt-8">
-            <button
-                className="bg-green-600 text-white px-6 py-3 font-bold hover:bg-green-700 transition"
-                onClick={() => alert("TODO: Save as Markdown and publish")}>
-                Publicar Blog: Tu voz importa!
-            </button>
-        </div>
     </>
     )
 }
