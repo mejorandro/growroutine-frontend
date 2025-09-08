@@ -34,7 +34,7 @@ En 2045, cada hora que hoy desperdicias será una hora de desigualdad mañana.
 
 ## El papel de GrowRoutine en este futuro
 
-🌱 **GrowRoutine** es más que una marca: es un recordatorio constante de que **el futuro se escribe con hábitos**.  
+**GrowRoutine** es más que una marca: es un recordatorio constante de que **el futuro se escribe con hábitos**.  
 No importa si el 2045 trae promesas de abundancia o riesgos de desigualdad:  
 lo que decidas hacer cada día con tu tiempo y tu atención será lo que determine de qué lado de la brecha te encuentras.  
 
@@ -43,7 +43,7 @@ Un sistema diseñado para que, cuando llegue el 2045, no seas un espectador de l
 
 ---
 
-✨ **El 2045 no está tan lejos.**  
+**El 2045 no está tan lejos.**  
 Y cada día que pasa es un voto silencioso hacia el lado de la historia en el que querés estar.  
 
 🌱 **GrowRoutine**: porque tus hábitos hoy deciden tu lugar mañana.

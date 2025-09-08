@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import cn from "classnames";
 import { ThemeSwitcher } from "./_components/theme-switcher";
+import Script from "next/script";
 
 import "./globals.css";
 
@@ -32,15 +33,15 @@ export default function RootLayout({
         />
         <link
           rel="icon"
-          type="image/png"
+          type="image/jpg"
           sizes="32x32"
-          href="/favicon/favicon-32x32.png"
+          href="/favicon/favicon-32x32.jpg"
         />
         <link
           rel="icon"
           type="image/png"
-          sizes="16x16"
-          href="/favicon/favicon-16x16.png"
+          sizes="32/32"
+          href="/favicon/favicon-32x32.jpg"
         />
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link
@@ -63,6 +64,22 @@ export default function RootLayout({
         <ThemeSwitcher />
         <div className="min-h-screen">{children}</div>
         <Footer />
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-2LXCNHMGYB"
+          strategy="afterInteractive"
+        />
+        <Script id="ga-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-2LXCNHMGYB', {
+              anonymize_ip: true,
+              send_page_view: false
+            });
+          `}
+        </Script>
       </body>
     </html>
   );

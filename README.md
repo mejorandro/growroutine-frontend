@@ -6,7 +6,7 @@ The main intelligence and orchestration live in the **[GrowPulse Backend](https:
 ---
 
 ## 🚧 About This Repo
-The **GrowPulse Frontend** is a **Next.js 14** app designed to transform backend outputs into a **dynamic blog-like experience**.  
+The **GrowPulse Frontend** is a **Next.js 14/15** app designed to transform backend outputs into a **dynamic blog-like experience**.  
 
 It currently supports:
 - Static Markdown posts (`/posts`)  
@@ -51,11 +51,11 @@ The backend provides:
 
 ## 🚀 Next Features (Roadmap)
 We are evolving from a **static reader** to a **dynamic funnel**:  
-- **Redirect Flow:** instead of showing full blog inline, redirect users to `/{profession}/{sector}`  
-- **Progressive Rendering:** show title + summary instantly, reveal sections step by step (ChatGPT-style)  
-- **Analytics:** track funnel drop-off and engagement  
-- **Authentication:** allow publishing only for logged-in users (Google Auth, Cognito)  
-- **SEO:** make each `/profession/sector` page indexable with dynamic metadata  
+- **Prompt refinement** on the backend to increase value to the user  
+- **Progressive rendering**: show title + summary instantly, reveal sections step by step (ChatGPT-style)  
+- **Analytics**: track funnel drop-off and engagement  
+- **Authentication**: publishing only for logged-in users (Google Auth, Cognito)  
+- **SEO**: make each `/profession/sector` page indexable with dynamic metadata  
 
 ---
 
@@ -74,25 +74,22 @@ The current blog creation flow works as follows:
 2. API call to backend generates blog title + summary.  
 3. Progressive rendering shows blog sections step by step.  
 
-### Screenshots
+# App Screenshots 
 
-![Create Blog Flow - Step 1](docs/create-blog-flow.png)  
-![Create Blog Flow - Step 2](docs/create-blog-flow-2.png)  
-![Create Blog Flow - Step 3](docs/create-blog-flow-3.png)  
+## Form
+![Create Blog Flow - Step 1](docs/create-blog-flow-A-v2.png)  
+
+## Loading Page
+![Create Blog Flow - Step 2](docs/create-blog-flow-B-v2.png)  
+
+## Generated AI Blog Content
+![Create Blog Flow - Step 3](docs/create-blog-flow-C-v2.png)  
+
+## Final blog
+![Create Blog Flow - Step 4](docs/create-blog-flow-D-v2.png)  
 
 ---
 
-## ⚡ Quick Start
-
-```bash
-git clone https://github.com/mejorandro/growpulse-frontend
-cd growpulse-frontend
-npm install
-npm run dev
-```
-
-> Requires **Node.js >=18.17** and npm/yarn/pnpm.
-=======
 ## ⚡ Quick Start
 
 ```bash
@@ -115,7 +112,7 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
 ```
 
-An `.env.example` is recommended for collaborators.
+An `.env.example` is included for collaborators.
 
 ---
 
@@ -141,26 +138,48 @@ An `.env.example` is recommended for collaborators.
 
 ---
 
-## 🧪 Testing
-
-We aim to cover:  
-- **Unit tests** for components (Jest, React Testing Library)  
-- **Integration tests** for API routes  
-- **E2E tests** with Playwright or Cypress  
-
-Run tests with:
-
-```bash
-npm run test
-```
-
----
-
 ## 🚀 Deployment
 
-- Default deployment target: **Vercel** (recommended for Next.js)  
-- Ensure env vars are set in Vercel dashboard  
-- Auto deploys from `main` branch
+### Default
+- Recommended: **Vercel** (ideal for Next.js apps).  
+- Ensure env vars are set in Vercel dashboard.  
+- Auto-deploys from `main` branch.  
+
+### Custom Production Deployment (Current)
+The project is also deployed on **AWS EC2 (Ubuntu 22.04 LTS)** following a production-ready process.
+
+**Tech Used**
+- AWS EC2 (Ubuntu 22.04 LTS)  
+- Node.js 20 (LTS)  
+- Next.js 15  
+- Nginx (reverse proxy, SSL termination)  
+- Let’s Encrypt (Certbot)  
+- systemd  
+- Git  
+
+**Server Structure**
+```
+/srv/<project>/frontend      Application source
+/etc/<project>/frontend.env  Environment variables
+/var/log/<project>/frontend  Logs
+```
+
+**Deployment Steps**
+1. Provisioned EC2 instance and configured security groups (SSH, HTTP, HTTPS).  
+2. Installed Git, Node.js, Nginx, and Certbot.  
+3. Cloned repository and built frontend with `npm ci && npm run build`.  
+4. Added systemd service to manage Next.js lifecycle on port 3000.  
+5. Configured Nginx to redirect HTTP→HTTPS and proxy traffic to Next.js.  
+6. Issued TLS certificates with Certbot and tested auto-renewal.  
+
+**Security**
+- HTTPS enforced.  
+- Security headers applied via Nginx.  
+- Access controlled by AWS Security Group.  
+
+**Result**
+- Frontend successfully deployed with HTTPS.  
+- Available at **https://growroutine.com** (currently private, expected public release in early October).  
 
 ---
 
