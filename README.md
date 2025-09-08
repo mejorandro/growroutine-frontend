@@ -1,4 +1,4 @@
-# 🌿 GrowPulse Frontend
+# 🌿 GrowRoutine Frontend
 
 ⚠️ **Status:** Active development.  
 The main intelligence and orchestration live in the **[GrowPulse Backend](https://github.com/mejorandro/growpulse-backend)**.  
@@ -6,7 +6,7 @@ The main intelligence and orchestration live in the **[GrowPulse Backend](https:
 ---
 
 ## 🚧 About This Repo
-The **GrowPulse Frontend** is a **Next.js 14/15** app designed to transform backend outputs into a **dynamic blog-like experience**.  
+The **GrowRoutine Frontend** is a **Next.js 14/15** app designed to transform backend outputs into a **dynamic blog-like experience**.  
 
 It currently supports:
 - Static Markdown posts (`/posts`)  
