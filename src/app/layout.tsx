@@ -14,9 +14,6 @@ export const metadata: Metadata = {
   title: 'GrowRoutine — AI, hábitos y crecimiento sostenible',
   description: 'Tu fuente de inspiración diaria para crear disciplina, constancia y resultados. AI + hábitos + mindset.',
   openGraph: {
-    images: [HOME_OG_IMAGE_URL],
-  },
-  openGraph: {
     title: "GrowRoutine — Crece 1% cada día",
     description:
       "Tu fuente de inspiración diaria para crear disciplina, constancia y resultados. AI + hábitos + mindset.",
