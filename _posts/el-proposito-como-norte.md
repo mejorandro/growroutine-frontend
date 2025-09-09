@@ -4,7 +4,7 @@ excerpt: "Cuando sabes hacia dónde vas, cada hábito deja de ser una carga y se
 coverImage: "/assets/blog/covers/proposito-claro.jpg"
 date: "2025-09-03T09:00:00.000Z"
 author:
-  name: GrowRoutine
+  name: Grow Routine
   picture: "/assets/blog/authors/growroutine.png"
 ogImage:
   url: "/assets/blog/preview/cover.jpg"
