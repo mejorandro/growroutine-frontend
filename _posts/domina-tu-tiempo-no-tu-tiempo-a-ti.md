@@ -4,7 +4,7 @@ excerpt: "El tiempo es el recurso más justo: todos recibimos las mismas 24 hora
 coverImage: "/assets/blog/covers/dessert.jpg"
 date: "2025-09-04T09:00:00.000Z"
 author:
-  name: GrowRoutine
+  name: Grow Routine
   picture: "/assets/blog/authors/growroutine.png"
 ogImage:
   url: "/assets/blog/covers"

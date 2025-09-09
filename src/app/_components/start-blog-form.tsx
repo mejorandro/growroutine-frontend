@@ -47,7 +47,7 @@ export default function StartBlogForm() {
       <section className="my-12">
         <h2 className="mb-4 text-5xl font-bold">Crear blog dinámico</h2>
         <p className="mt-4 text-lg leading-relaxed mb-4">
-          El que no escribe su historia, termina leyendo la de otros. Tú no...
+        Imagina despertar con un mapa de lo que realmente importa en tu sector. Eso es GrowPulse: una brújula diaria hecha para tu profesión y tu contexto.
         </p>
 
         <form

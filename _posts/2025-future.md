@@ -4,8 +4,8 @@ excerpt: "El 2045 no será un año cualquiera: será un punto de quiebre. La cla
 coverImage: "/assets/blog/covers/2045-future.png"
 date: "2025-09-04T11:00:00.000Z"
 author:
-  name: Alejandro Bermúdez
-  picture: "/assets/blog/authors/mejorandro.png"
+  name: Grow Routine
+  picture: "/assets/blog/authors/growroutine.png"
 ogImage:
   url: "/assets/blog/covers/2045-future.jpg"
 ---
