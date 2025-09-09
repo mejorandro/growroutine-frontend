@@ -4,7 +4,7 @@ excerpt: "No se trata de cambios gigantescos, sino de pequeñas decisiones repet
 coverImage: "/assets/blog/covers/1-diario.jpg"
 date: "2025-08-30T09:00:00.000Z"
 author:
-  name: GrowRoutine
+  name: Grow Routine
   picture: "/assets/blog/authors/growroutine.png"
 ogImage:
   url: "/assets/blog/preview/cover.jpg"

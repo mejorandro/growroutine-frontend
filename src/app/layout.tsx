@@ -11,10 +11,39 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: `Next.js Blog Example with ${CMS_NAME}`,
-  description: `A statically generated blog example using Next.js and ${CMS_NAME}.`,
+  title: 'GrowRoutine — AI, hábitos y crecimiento sostenible',
+  description: 'Tu fuente de inspiración diaria para crear disciplina, constancia y resultados. AI + hábitos + mindset.',
   openGraph: {
     images: [HOME_OG_IMAGE_URL],
+  },
+  openGraph: {
+    title: "GrowRoutine — Crece 1% cada día",
+    description:
+      "Tu fuente de inspiración diaria para crear disciplina, constancia y resultados. AI + hábitos + mindset.",
+    url: "https://growroutine.com",
+    siteName: "GrowRoutine",
+    images: [
+      {
+        url: "/favicon/android-chrome-512x512.png",
+        width: 512,
+        height: 512,
+        alt: "GrowRoutine Logo",
+      },
+    ],
+    locale: "es_CR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "GrowRoutine — Crece 1% cada día",
+    description:
+      "Convierte conocimiento, rutinas y AI en crecimiento sostenible. Tu rutina, tu futuro.",
+    images: ["/favicon/android-chrome-512x512.png"],
+  },
+  icons: {
+    icon: "/favicon/favicon.ico",
+    shortcut: "/favicon/favicon.ico",
+    apple: "/favicon/apple-touch-icon.png",
   },
 };
 
